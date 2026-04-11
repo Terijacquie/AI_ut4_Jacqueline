@@ -10,6 +10,8 @@ public class MainCubo {
         crearCubo();
         imprimirVolumen(cubos);
         imprimirAreaBase(cubos);
+        imprimirCuboMayor(cubos);
+
     }
 
     public static void crearCubo() {
@@ -26,18 +28,28 @@ public class MainCubo {
 
     public static void imprimirVolumen(ArrayList<Cubo> cubos) {
         int acumulador = 1;
-        for (Cubo c :  cubos) {
+        for (Cubo c : cubos) {
             JOptionPane.showMessageDialog(null,
-                    "El volúmen del cubo "+acumulador+" es "+c.calcularVolumen());
-                    acumulador++;
+                    "El volúmen del cubo " + acumulador + " es " + c.calcularVolumen());
+            acumulador++;
         }
+    }
+
+    public static void imprimirCuboMayor(ArrayList<Cubo> cubos) {
+        Cubo cuboMayor = cubos.get(0);
+        for (Cubo c : cubos) {
+            if (c.calcularVolumen() > cuboMayor.calcularVolumen()) {
+                cuboMayor = c;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "El cubo de mayor volumen es " + cuboMayor.calcularVolumen());
     }
 
     public static void imprimirAreaBase(ArrayList<Cubo> cubos) {
         int acumulador = 1;
-        for (Cubo c :  cubos) {
+        for (Cubo c : cubos) {
             JOptionPane.showMessageDialog(null,
-                    "El área base del cubo "+acumulador+" es "+c.calcularAreaBase());
+                    "El área base del cubo " + acumulador + " es " + c.calcularAreaBase());
             acumulador++;
         }
     }
