@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 
+/***
+ * Clase cubo con atributo unico de lado. Esta clase contendrá
+ * los respectivos getter y setter, constructor y métodos necesarios
+ * para el cálculo del área base y volúmen de dicho objeto.
+ */
 public class Cubo {
-    /***
-     * Clase cubo con atributo unico de lado. Esta clase contendrá
-     * los respectivos getter y setter, constructor y métodos necesarios
-     * para el cálculo del área base y volúmen de dicho objeto.
-     * @param args
-     */
     private double lado;
 
     /**
