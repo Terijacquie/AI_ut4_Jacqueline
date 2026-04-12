@@ -32,12 +32,12 @@ public class MainCubo {
       */
     public static void crearCubo() {
         int cantidad = 3;
-
         for (int i = 0; i < cantidad; i++) {
+            String nombreCubo = JOptionPane.showInputDialog(null, "Ingrese el nombre del cubo "+(i+1));
             double lado = Double.parseDouble(JOptionPane.showInputDialog
                     (null, "Ingrese la medida del lado del cubo " + (i + 1)));
 
-            Cubo miCubo = new Cubo(lado);
+            Cubo miCubo= new Cubo(lado, nombreCubo);
             cubos.add(miCubo);
         }
     }
@@ -47,11 +47,9 @@ public class MainCubo {
      * @param cubos
      */
     public static void imprimirVolumen(ArrayList<Cubo> cubos) {
-        int acumulador = 1;
         for (Cubo c : cubos) {
             JOptionPane.showMessageDialog(null,
-                    "El volúmen del cubo " + acumulador + " es " + c.calcularVolumen());
-            acumulador++;
+                    "El volúmen de " + c.getNombreCubo() + " es " + c.calcularVolumen());
         }
     }
 
@@ -77,11 +75,9 @@ public class MainCubo {
      * @param cubos
      */
     public static void imprimirAreaBase(ArrayList<Cubo> cubos) {
-        int acumulador = 1;
         for (Cubo c : cubos) {
             JOptionPane.showMessageDialog(null,
-                    "El área base del cubo " + acumulador + " es " + c.calcularAreaBase());
-            acumulador++;
+                    "El área base de " + c.getNombreCubo() + " es " + c.calcularAreaBase());
         }
     }
 

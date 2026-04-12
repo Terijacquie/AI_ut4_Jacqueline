@@ -7,13 +7,23 @@ import java.util.ArrayList;
  */
 public class Cubo {
     private double lado;
+    private String nombreCubo;
+
+    public String getNombreCubo() {
+        return nombreCubo;
+    }
+
+    public void setNombreCubo(String nombreCubo) {
+        this.nombreCubo = nombreCubo;
+    }
 
     /**
      * Crea un nuevo objeto cubo
      * @param lado
      */
-    public Cubo(double lado) {
+    public Cubo(double lado, String nombreCubo) {
         this.lado = lado;
+        this.nombreCubo = nombreCubo;
     }
 
     /**
