@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GestorCubos {
     /**
@@ -62,5 +63,16 @@ public class GestorCubos {
             JOptionPane.showMessageDialog(null,
                     "El área base de " + c.getNombreCubo() + " es " + c.calcularAreaBase());
         }
+    }
+
+    public void imprimirPorTamanio() {
+        Collections.sort(cubos);
+        for (Cubo c : cubos) {
+            JOptionPane.showMessageDialog(null, "Lista de Cubos: "+c.getNombreCubo());
+        }
+    }
+
+    public boolean siCabe(Cubo c1, Cubo c2) {
+        return c1.getLado() < c2.getLado();
     }
 }

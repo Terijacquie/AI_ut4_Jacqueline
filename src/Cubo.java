@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * los respectivos getter y setter, constructor y métodos necesarios
  * para el cálculo del área base y volúmen de dicho objeto.
  */
-public class Cubo {
+public class Cubo implements Comparable<Cubo> {
     private double lado;
     private String nombreCubo;
 
@@ -55,5 +55,10 @@ public class Cubo {
         return "Cubo{" +
                 "lado=" + lado +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Cubo o) {
+        return Double.compare(this.lado, o.lado);
     }
 }
