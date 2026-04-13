@@ -8,6 +8,10 @@ public class GestorCubos {
      */
     private ArrayList<Cubo> cubos = new ArrayList<Cubo>();
 
+    public ArrayList<Cubo> getCubos() {
+        return cubos;
+    }
+
     /**
      * Método para crear los 3 cubos solicitados en la actividad
      * con un bucle for, donde solicitamos el lado de los mismos a través de
