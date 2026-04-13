@@ -65,6 +65,9 @@ public class GestorCubos {
         }
     }
 
+    /**
+     * Método para imprimir los cubos por tamaño
+     */
     public void imprimirPorTamanio() {
         Collections.sort(cubos);
         for (Cubo c : cubos) {
@@ -72,6 +75,12 @@ public class GestorCubos {
         }
     }
 
+    /**
+     * Método booleano para determinar si un cubo cabe dentro de otro
+     * @param c1
+     * @param c2
+     * @return
+     */
     public boolean siCabe(Cubo c1, Cubo c2) {
         return c1.getLado() < c2.getLado();
     }
